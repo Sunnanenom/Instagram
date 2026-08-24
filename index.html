@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>กิจกรรมแจกเพชรฟรี 5,100 💎</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,7 +79,6 @@ body{
 .logo{
   font-size:20px;
   font-weight:800;
-  color:#172033;
 }
 
 .logo span{
@@ -159,7 +159,6 @@ body{
 
 .badge{
   display:inline-flex;
-  align-items:center;
   padding:6px 12px;
   border-radius:30px;
   background:linear-gradient(90deg,#ffe1f1,#dff8ff);
@@ -173,7 +172,6 @@ h1{
   font-size:29px;
   line-height:1.2;
   font-weight:800;
-  color:#111827;
 }
 
 .subtitle{
@@ -188,9 +186,11 @@ h1{
   border-radius:23px;
   padding:17px;
   margin-bottom:20px;
-  background:
-    linear-gradient(145deg,rgba(255,218,238,.75),rgba(216,248,255,.85));
-  border:1px solid rgba(255,255,255,.9);
+  background:linear-gradient(
+    145deg,
+    rgba(255,218,238,.75),
+    rgba(216,248,255,.85)
+  );
 }
 
 .diamond{
@@ -245,7 +245,6 @@ h1{
   font-family:inherit;
   font-size:16px;
   color:#172033;
-  transition:.2s;
 }
 
 .input:focus{
@@ -282,6 +281,16 @@ h1{
   border:1px solid #ffd0e6;
 }
 
+.btn-instagram{
+  color:white;
+  background:linear-gradient(
+    90deg,
+    #f58529,
+    #dd2a7b,
+    #8134af
+  );
+}
+
 .info{
   margin-top:13px;
   padding:12px;
@@ -305,6 +314,38 @@ h1{
   max-height:390px;
   object-fit:contain;
   border-radius:13px;
+}
+
+.example-title{
+  font-weight:700;
+  font-size:16px;
+  margin-top:20px;
+  margin-bottom:8px;
+}
+
+.example-description{
+  color:#64748b;
+  font-size:12px;
+  line-height:1.6;
+  margin-bottom:10px;
+}
+
+.example-img{
+  width:100%;
+  display:block;
+  border-radius:15px;
+  background:#f1f5f9;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.image-size{
+  display:inline-block;
+  margin-top:8px;
+  padding:5px 10px;
+  border-radius:20px;
+  background:#eafaff;
+  color:#229fc5;
+  font-size:11px;
 }
 
 .task{
@@ -339,50 +380,6 @@ h1{
   color:#64748b;
   font-size:12px;
   margin-top:2px;
-}
-
-.upload{
-  position:relative;
-  border:2px dashed #bde9f5;
-  border-radius:18px;
-  padding:24px 15px;
-  text-align:center;
-  background:#f8fdff;
-  margin-top:12px;
-}
-
-.upload input{
-  position:absolute;
-  inset:0;
-  opacity:0;
-  cursor:pointer;
-}
-
-.upload-icon{
-  font-size:35px;
-}
-
-.upload strong{
-  display:block;
-  margin-top:5px;
-}
-
-.upload p{
-  color:#94a3b8;
-  font-size:12px;
-}
-
-.preview{
-  display:none;
-  margin-top:14px;
-}
-
-.preview img{
-  width:100%;
-  max-height:350px;
-  object-fit:contain;
-  border-radius:15px;
-  background:#f1f5f9;
 }
 
 .summary{
@@ -477,7 +474,7 @@ h1{
 
   <div class="card">
 
-    <!-- PAGE 1 -->
+    <!-- หน้า 1 -->
     <section id="page1" class="page active">
 
       <div class="badge">🎁 FREE FIRE EVENT</div>
@@ -522,13 +519,13 @@ h1{
       </button>
 
       <div class="info">
-        🔒 เราจะใช้ UID สำหรับระบุบัญชีเกมที่เข้าร่วมกิจกรรมเท่านั้น
+        🔒 กรุณาตรวจสอบ UID ให้ถูกต้องก่อนดำเนินการต่อ
       </div>
 
     </section>
 
 
-    <!-- PAGE 2 -->
+    <!-- หน้า 2 -->
     <section id="page2" class="page">
 
       <div class="badge">STEP 2 · ทำภารกิจ</div>
@@ -536,9 +533,10 @@ h1{
       <h1>ทำภารกิจ<br>เพื่อยืนยันสิทธิ์</h1>
 
       <p class="subtitle">
-        ทำตามขั้นตอนด้านล่าง แล้วส่งภาพหลักฐาน
+        ทำตามขั้นตอนด้านล่าง แล้วเตรียมหลักฐานของคุณ
       </p>
 
+      <!-- รูปกิจกรรม -->
       <div class="image-card">
 
         <img
@@ -551,55 +549,97 @@ h1{
           class="btn btn-secondary"
           onclick="openActivityImage()"
         >
-          🖼️ เปิดรูปภาพ
+          🖼️ เปิดรูปกิจกรรม
         </button>
 
       </div>
 
+
+      <!-- ตัวอย่างการตั้งหน้าจอล็อก -->
+      <div class="example-title">
+        📱 ตัวอย่างการตั้งหน้าจอล็อก
+      </div>
+
+      <div class="example-description">
+        ดูตัวอย่างด้านล่างเพื่อทำตามขั้นตอนการตั้งภาพเป็น
+        หน้าจอล็อกโทรศัพท์
+      </div>
+
+      <img
+        class="example-img"
+        src="https://i.ibb.co/dwHG4R7S/IMG-3226.png"
+        alt="ตัวอย่างการตั้งหน้าจอล็อก"
+      >
+
+      <div style="text-align:center;">
+        <span class="image-size">
+          📐 ขนาดภาพ 1125 × 2436 px
+        </span>
+      </div>
+
+
+      <!-- ขั้นตอน -->
       <div class="task">
         <div class="task-number">1</div>
+
         <div>
           <strong>บันทึกรูปกิจกรรม</strong>
-          <p>เปิดรูปด้านบนและบันทึกลงในโทรศัพท์</p>
+          <p>
+            เปิดรูปกิจกรรมและบันทึกลงในโทรศัพท์
+          </p>
         </div>
       </div>
 
       <div class="task">
         <div class="task-number">2</div>
+
         <div>
           <strong>ตั้งเป็นหน้าจอล็อก</strong>
-          <p>นำรูปไปตั้งเป็นภาพหน้าจอล็อกโทรศัพท์</p>
+          <p>
+            ตั้งรูปกิจกรรมเป็นภาพหน้าจอล็อก
+            ตามตัวอย่างด้านบน
+          </p>
         </div>
       </div>
 
       <div class="task">
         <div class="task-number">3</div>
+
         <div>
           <strong>แคปหน้าจอเป็นหลักฐาน</strong>
-          <p>ถ่ายภาพหน้าจอที่แสดงว่าตั้งรูปเรียบร้อยแล้ว</p>
+          <p>
+            ถ่ายภาพหน้าจอที่แสดงว่าตั้งรูปเรียบร้อยแล้ว
+          </p>
         </div>
       </div>
 
-      <button class="btn btn-primary" onclick="goToUpload()">
+      <button
+        class="btn btn-primary"
+        onclick="goToUpload()"
+      >
         ทำภารกิจเสร็จแล้ว →
       </button>
 
-      <button class="btn btn-secondary" onclick="showPage(1)">
+      <button
+        class="btn btn-secondary"
+        onclick="showPage(1)"
+      >
         ← กลับ
       </button>
 
     </section>
 
 
-    <!-- PAGE 3 -->
+    <!-- หน้า 3 -->
     <section id="page3" class="page">
 
       <div class="badge">STEP 3 · ส่งหลักฐาน</div>
 
-      <h1>อัปโหลด<br>ภาพหลักฐาน</h1>
+      <h1>ส่งหลักฐาน<br>ผ่าน Instagram</h1>
 
       <p class="subtitle">
-        เลือกภาพหน้าจอที่แสดงหลักฐานการทำภารกิจ
+        ตรวจสอบข้อมูลของคุณ แล้วเปิด Instagram
+        เพื่อส่งภาพหลักฐานให้ผู้จัดกิจกรรม
       </p>
 
       <div class="summary">
@@ -616,33 +656,38 @@ h1{
 
       </div>
 
-      <div class="upload">
-
-        <div class="upload-icon">📸</div>
-
-        <strong>เลือกภาพหลักฐาน</strong>
-
-        <p>JPG, JPEG หรือ PNG</p>
-
-        <input
-          id="proof"
-          type="file"
-          accept="image/jpeg,image/png,image/jpg"
-          onchange="previewImage(event)"
-        >
-
+      <div class="info">
+        📸 หลังจากเลือกภาพหลักฐานแล้ว
+        กดปุ่ม Instagram ด้านล่างเพื่อเปิดบัญชีผู้จัดกิจกรรม
+        และส่งภาพหลักฐานด้วยตัวเอง
       </div>
 
-      <div id="preview" class="preview">
-        <img id="previewImg" alt="ตัวอย่างหลักฐาน">
+      <div class="image-card" style="margin-top:15px;">
+
+        <div style="font-size:38px;">📱</div>
+
+        <strong style="display:block;">
+          บัญชีสำหรับส่งหลักฐาน
+        </strong>
+
+        <p style="color:#64748b;font-size:13px;margin-top:4px;">
+          Instagram: @ployy.p83
+        </p>
+
       </div>
 
       <button
-        id="submitBtn"
-        class="btn btn-primary"
-        onclick="submitProof()"
+        class="btn btn-instagram"
+        onclick="openInstagram()"
       >
-        📤 ส่งหลักฐาน
+        📸 เปิด Instagram @ployy.p83
+      </button>
+
+      <button
+        class="btn btn-primary"
+        onclick="finishActivity()"
+      >
+        ฉันส่งหลักฐานแล้ว ✓
       </button>
 
       <button
@@ -653,13 +698,13 @@ h1{
       </button>
 
       <div class="info">
-        🔒 ภาพหลักฐานจะถูกส่งให้ระบบของกิจกรรมเพื่อใช้ตรวจสอบ
+        ⚠️ ตรวจสอบชื่อบัญชี Instagram ให้ถูกต้องก่อนส่งหลักฐาน
       </div>
 
     </section>
 
 
-    <!-- PAGE 4 -->
+    <!-- หน้า 4 -->
     <section id="page4" class="page">
 
       <div class="success">
@@ -668,12 +713,12 @@ h1{
           ✅
         </div>
 
-        <h2>ส่งหลักฐานสำเร็จ!</h2>
+        <h2>ดำเนินการเรียบร้อย!</h2>
 
         <p>
-          ระบบได้รับข้อมูลของคุณแล้ว
+          ระบบบันทึกข้อมูลกิจกรรมของคุณแล้ว
           <br>
-          กรุณารอทีมงานตรวจสอบกิจกรรม
+          กรุณารอทีมงานตรวจสอบหลักฐาน
         </p>
 
         <div class="summary">
@@ -690,7 +735,9 @@ h1{
 
           <div class="summary-row">
             <span>สถานะ</span>
-            <span style="color:#16a34a">รอตรวจสอบ</span>
+            <span style="color:#16a34a;">
+              รอตรวจสอบ
+            </span>
           </div>
 
         </div>
@@ -709,7 +756,7 @@ h1{
   </div>
 
   <div class="footer">
-    Free Fire Giveaway • กิจกรรมแจกเพชร 5,100 💎
+    Free Fire Giveaway • 5,100 💎
   </div>
 
 </div>
@@ -718,7 +765,6 @@ h1{
 <script>
 
 let userUID = "";
-let selectedFile = null;
 
 function updateProgress(step){
 
@@ -729,11 +775,13 @@ function updateProgress(step){
     4:"100%"
   };
 
-  document.getElementById("progressBar").style.width = widths[step];
+  document.getElementById("progressBar").style.width =
+    widths[step];
 
   for(let i=1;i<=4;i++){
 
-    const el = document.getElementById("step"+i);
+    const el =
+      document.getElementById("step"+i);
 
     if(i <= step){
       el.classList.add("active");
@@ -747,11 +795,15 @@ function updateProgress(step){
 
 function showPage(number){
 
-  document.querySelectorAll(".page").forEach(page=>{
-    page.classList.remove("active");
-  });
+  document
+    .querySelectorAll(".page")
+    .forEach(page=>{
+      page.classList.remove("active");
+    });
 
-  document.getElementById("page"+number).classList.add("active");
+  document
+    .getElementById("page"+number)
+    .classList.add("active");
 
   updateProgress(number);
 
@@ -759,13 +811,17 @@ function showPage(number){
     top:0,
     behavior:"smooth"
   });
+
 }
 
 
 function goToTask(){
 
-  const input = document.getElementById("uid");
-  const uid = input.value.trim();
+  const input =
+    document.getElementById("uid");
+
+  const uid =
+    input.value.trim();
 
   if(!uid){
 
@@ -793,9 +849,12 @@ function goToTask(){
 
   userUID = uid;
 
-  document.getElementById("summaryUid").textContent = uid;
+  document
+    .getElementById("summaryUid")
+    .textContent = uid;
 
   showPage(2);
+
 }
 
 
@@ -816,115 +875,23 @@ function goToUpload(){
 }
 
 
-function previewImage(event){
+function openInstagram(){
 
-  const file = event.target.files[0];
-
-  if(!file) return;
-
-  const allowed = [
-    "image/jpeg",
-    "image/png",
-    "image/jpg"
-  ];
-
-  if(!allowed.includes(file.type)){
-
-    alert("กรุณาเลือกไฟล์ JPG หรือ PNG");
-    event.target.value = "";
-    return;
-
-  }
-
-  if(file.size > 10 * 1024 * 1024){
-
-    alert("ไฟล์ต้องมีขนาดไม่เกิน 10MB");
-    event.target.value = "";
-    return;
-
-  }
-
-  selectedFile = file;
-
-  const reader = new FileReader();
-
-  reader.onload = function(e){
-
-    document.getElementById("previewImg").src = e.target.result;
-
-    document.getElementById("preview").style.display = "block";
-
-  };
-
-  reader.readAsDataURL(file);
+  window.open(
+    "https://www.instagram.com/ployy.p83/",
+    "_blank"
+  );
 
 }
 
 
-async function submitProof(){
+function finishActivity(){
 
-  if(!selectedFile){
+  document
+    .getElementById("finalUid")
+    .textContent = userUID;
 
-    alert("กรุณาเลือกภาพหลักฐานก่อน");
-    return;
-
-  }
-
-  const button = document.getElementById("submitBtn");
-
-  button.disabled = true;
-  button.textContent = "⏳ กำลังส่งหลักฐาน...";
-
-  try{
-
-    /*
-      ตรงนี้ให้ Backend ของคุณรับข้อมูล
-      แล้ว Backend เป็นผู้ส่งต่อไป Telegram
-
-      ตัวอย่าง API:
-      POST /api/submit
-
-      FormData:
-      uid
-      reward
-      proof
-    */
-
-    const formData = new FormData();
-
-    formData.append("uid", userUID);
-    formData.append("reward", "5100");
-    formData.append("proof", selectedFile);
-
-    const response = await fetch("/api/submit",{
-      method:"POST",
-      body:formData
-    });
-
-    if(!response.ok){
-      throw new Error("ส่งข้อมูลไม่สำเร็จ");
-    }
-
-    document.getElementById("finalUid").textContent = userUID;
-
-    showPage(4);
-
-  }catch(error){
-
-    /*
-      ถ้ายังไม่มี Backend ให้เอา alert นี้ออก
-      หลังจากสร้าง /api/submit แล้วระบบจะส่งจริง
-    */
-
-    alert(
-      "ตอนนี้ยังไม่ได้เชื่อมต่อระบบส่งหลักฐาน\n\n" +
-      "กรุณาสร้าง /api/submit ฝั่ง Backend ก่อน"
-    );
-
-    button.disabled = false;
-    button.textContent = "📤 ส่งหลักฐาน";
-
-  }
+  showPage(4);
 
 }
 
