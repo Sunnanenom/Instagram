@@ -1,275 +1,512 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>กิจกรรมแจกเพชรฟรี 5,100 💎</title>
 
-  <title>กิจกรรมแจกเพชรฟรี 5,100 💎</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+:root{
+  --pink:#ff4fa3;
+  --pink2:#ff8dcc;
+  --blue:#7ddcff;
+  --blue2:#b9efff;
+  --dark:#111827;
+  --muted:#64748b;
+}
 
-    body {
-      font-family: "Kanit", sans-serif;
-      min-height: 100vh;
-      background:
-        radial-gradient(circle at top, #172554 0%, transparent 45%),
-        linear-gradient(135deg, #050816, #0b1026 55%, #050816);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      overflow-x: hidden;
-    }
+body{
+  min-height:100vh;
+  font-family:"Kanit",sans-serif;
+  color:#172033;
+  background:
+    radial-gradient(circle at 10% 10%,rgba(255,120,190,.35),transparent 30%),
+    radial-gradient(circle at 90% 20%,rgba(100,220,255,.35),transparent 30%),
+    linear-gradient(135deg,#fff5fb,#eefdff);
+}
 
-    .container {
-      width: 100%;
-      max-width: 430px;
-    }
+.bg-circle{
+  position:fixed;
+  border-radius:50%;
+  filter:blur(70px);
+  pointer-events:none;
+  z-index:-1;
+}
 
-    .card {
-      position: relative;
-      overflow: hidden;
-      background: rgba(15, 23, 42, 0.92);
-      border: 1px solid rgba(96, 165, 250, 0.3);
-      border-radius: 25px;
-      padding: 25px 20px 28px;
-      box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.55),
-        0 0 35px rgba(37, 99, 235, 0.15);
-    }
+.c1{
+  width:220px;
+  height:220px;
+  background:#ff8dcc;
+  left:-100px;
+  top:100px;
+  opacity:.35;
+}
 
-    .card::before {
-      content: "";
-      position: absolute;
-      width: 180px;
-      height: 180px;
-      background: #2563eb;
-      filter: blur(100px);
-      opacity: .18;
-      top: -80px;
-      right: -60px;
-    }
+.c2{
+  width:250px;
+  height:250px;
+  background:#7ddcff;
+  right:-100px;
+  bottom:80px;
+  opacity:.4;
+}
 
-    .badge {
-      position: relative;
-      width: fit-content;
-      margin: 0 auto 12px;
-      padding: 6px 15px;
-      border-radius: 50px;
-      background: rgba(59, 130, 246, .15);
-      border: 1px solid rgba(96, 165, 250, .35);
-      color: #93c5fd;
-      font-size: 13px;
-    }
+.app{
+  width:100%;
+  max-width:480px;
+  margin:auto;
+  padding:18px 15px 35px;
+}
 
-    h1 {
-      position: relative;
-      text-align: center;
-      font-size: 27px;
-      font-weight: 800;
-      margin-bottom: 5px;
-    }
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:15px;
+}
 
-    .subtitle {
-      position: relative;
-      text-align: center;
-      color: #94a3b8;
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
+.logo{
+  font-size:20px;
+  font-weight:800;
+  color:#172033;
+}
 
-    .diamond-box {
-      position: relative;
-      text-align: center;
-      padding: 18px;
-      margin-bottom: 20px;
-      border-radius: 20px;
-      background: linear-gradient(
-        145deg,
-        rgba(30, 64, 175, .28),
-        rgba(15, 23, 42, .7)
-      );
-      border: 1px solid rgba(96, 165, 250, .25);
-    }
+.logo span{
+  color:var(--pink);
+}
 
-    .diamond-img {
-      width: 170px;
-      max-width: 70%;
-      height: auto;
-      object-fit: contain;
-      filter: drop-shadow(0 0 18px rgba(59, 130, 246, .65));
-      animation: float 3s ease-in-out infinite;
-    }
+.status{
+  padding:6px 11px;
+  border-radius:30px;
+  background:white;
+  border:1px solid rgba(255,79,163,.18);
+  color:#ff4fa3;
+  font-size:12px;
+  box-shadow:0 5px 20px rgba(80,100,130,.08);
+}
 
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-8px);
-      }
-    }
+.progress-wrap{
+  margin-bottom:16px;
+}
 
-    .amount {
-      margin-top: 8px;
-      font-size: 38px;
-      line-height: 1;
-      font-weight: 800;
-      color: #60a5fa;
-      text-shadow: 0 0 20px rgba(59, 130, 246, .5);
-    }
+.progress{
+  height:8px;
+  width:100%;
+  background:rgba(255,255,255,.8);
+  border-radius:20px;
+  overflow:hidden;
+}
 
-    .amount span {
-      font-size: 24px;
-    }
+.progress-bar{
+  height:100%;
+  width:25%;
+  border-radius:20px;
+  background:linear-gradient(90deg,var(--pink),var(--blue));
+  transition:.4s;
+}
 
-    .reward {
-      color: #cbd5e1;
-      font-size: 13px;
-      margin-top: 6px;
-    }
+.steps{
+  display:flex;
+  justify-content:space-between;
+  margin-top:8px;
+  color:#94a3b8;
+  font-size:11px;
+}
 
-    .form-title {
-      font-size: 17px;
-      font-weight: 700;
-      margin-bottom: 9px;
-    }
+.steps .active{
+  color:var(--pink);
+  font-weight:700;
+}
 
-    .input {
-      width: 100%;
-      height: 54px;
-      border-radius: 14px;
-      border: 1px solid #334155;
-      background: #080d1c;
-      color: white;
-      padding: 0 16px;
-      font-family: inherit;
-      font-size: 16px;
-      outline: none;
-      transition: .2s;
-    }
+.card{
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.9);
+  border-radius:28px;
+  padding:22px;
+  box-shadow:0 20px 55px rgba(70,100,130,.13);
+}
 
-    .input::placeholder {
-      color: #64748b;
-    }
+.page{
+  display:none;
+}
 
-    .input:focus {
-      border-color: #3b82f6;
-      box-shadow: 0 0 0 3px rgba(59, 130, 246, .12);
-    }
+.page.active{
+  display:block;
+  animation:fade .35s ease;
+}
 
-    .button {
-      width: 100%;
-      height: 55px;
-      margin-top: 14px;
-      border: 0;
-      border-radius: 14px;
-      font-family: inherit;
-      font-size: 17px;
-      font-weight: 700;
-      color: white;
-      cursor: pointer;
-      background: linear-gradient(135deg, #2563eb, #7c3aed);
-      box-shadow: 0 10px 25px rgba(37, 99, 235, .25);
-      transition: .2s;
-    }
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
 
-    .button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 14px 30px rgba(37, 99, 235, .35);
-    }
+.badge{
+  display:inline-flex;
+  align-items:center;
+  padding:6px 12px;
+  border-radius:30px;
+  background:linear-gradient(90deg,#ffe1f1,#dff8ff);
+  color:#e83d91;
+  font-size:12px;
+  font-weight:600;
+  margin-bottom:10px;
+}
 
-    .button:active {
-      transform: scale(.98);
-    }
+h1{
+  font-size:29px;
+  line-height:1.2;
+  font-weight:800;
+  color:#111827;
+}
 
-    .notice {
-      margin-top: 14px;
-      padding: 11px 13px;
-      border-radius: 12px;
-      background: rgba(30, 41, 59, .65);
-      color: #94a3b8;
-      font-size: 12px;
-      text-align: center;
-      line-height: 1.6;
-    }
+.subtitle{
+  color:#64748b;
+  font-size:14px;
+  margin-top:7px;
+  margin-bottom:18px;
+}
 
-    .result {
-      display: none;
-      margin-top: 18px;
-      padding: 15px;
-      border-radius: 15px;
-      background: rgba(34, 197, 94, .08);
-      border: 1px solid rgba(34, 197, 94, .25);
-    }
+.reward-box{
+  text-align:center;
+  border-radius:23px;
+  padding:17px;
+  margin-bottom:20px;
+  background:
+    linear-gradient(145deg,rgba(255,218,238,.75),rgba(216,248,255,.85));
+  border:1px solid rgba(255,255,255,.9);
+}
 
-    .result.show {
-      display: block;
-    }
+.diamond{
+  width:190px;
+  max-width:75%;
+  display:block;
+  margin:auto;
+  filter:drop-shadow(0 10px 18px rgba(66,188,230,.35));
+  animation:float 3s ease-in-out infinite;
+}
 
-    .result-title {
-      color: #4ade80;
-      font-weight: 700;
-      margin-bottom: 5px;
-    }
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-7px)}
+}
 
-    .result p {
-      color: #cbd5e1;
-      font-size: 14px;
-    }
+.amount{
+  font-size:40px;
+  line-height:1;
+  font-weight:800;
+  margin-top:4px;
+  background:linear-gradient(90deg,#ff3f99,#36bde8);
+  -webkit-background-clip:text;
+  color:transparent;
+}
 
-    .uid-value {
-      color: white;
-      font-weight: 700;
-    }
-  </style>
+.amount small{
+  font-size:23px;
+}
+
+.reward-text{
+  color:#64748b;
+  font-size:13px;
+  margin-top:5px;
+}
+
+.label{
+  display:block;
+  font-weight:600;
+  margin-bottom:8px;
+  font-size:15px;
+}
+
+.input{
+  width:100%;
+  height:55px;
+  border:1.5px solid #dbe4ec;
+  border-radius:15px;
+  outline:none;
+  background:white;
+  padding:0 15px;
+  font-family:inherit;
+  font-size:16px;
+  color:#172033;
+  transition:.2s;
+}
+
+.input:focus{
+  border-color:#ff75b7;
+  box-shadow:0 0 0 4px rgba(255,117,183,.1);
+}
+
+.btn{
+  width:100%;
+  height:54px;
+  border:0;
+  border-radius:15px;
+  margin-top:13px;
+  font-family:inherit;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn-primary{
+  color:white;
+  background:linear-gradient(100deg,#ff4fa3,#61cfee);
+  box-shadow:0 10px 25px rgba(255,79,163,.2);
+}
+
+.btn-secondary{
+  color:#e83d91;
+  background:#fff0f8;
+  border:1px solid #ffd0e6;
+}
+
+.info{
+  margin-top:13px;
+  padding:12px;
+  border-radius:14px;
+  background:#f8fafc;
+  color:#64748b;
+  font-size:12px;
+  line-height:1.6;
+}
+
+.image-card{
+  background:#f8fafc;
+  border-radius:19px;
+  padding:12px;
+  margin:15px 0;
+  text-align:center;
+}
+
+.activity-img{
+  width:100%;
+  max-height:390px;
+  object-fit:contain;
+  border-radius:13px;
+}
+
+.task{
+  display:flex;
+  gap:12px;
+  padding:13px;
+  margin:9px 0;
+  border-radius:15px;
+  background:#fff;
+  border:1px solid #edf1f5;
+}
+
+.task-number{
+  flex:none;
+  width:32px;
+  height:32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  color:white;
+  font-weight:700;
+  background:linear-gradient(135deg,#ff5ca8,#6ad8f4);
+}
+
+.task strong{
+  display:block;
+  font-size:14px;
+}
+
+.task p{
+  color:#64748b;
+  font-size:12px;
+  margin-top:2px;
+}
+
+.upload{
+  position:relative;
+  border:2px dashed #bde9f5;
+  border-radius:18px;
+  padding:24px 15px;
+  text-align:center;
+  background:#f8fdff;
+  margin-top:12px;
+}
+
+.upload input{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  cursor:pointer;
+}
+
+.upload-icon{
+  font-size:35px;
+}
+
+.upload strong{
+  display:block;
+  margin-top:5px;
+}
+
+.upload p{
+  color:#94a3b8;
+  font-size:12px;
+}
+
+.preview{
+  display:none;
+  margin-top:14px;
+}
+
+.preview img{
+  width:100%;
+  max-height:350px;
+  object-fit:contain;
+  border-radius:15px;
+  background:#f1f5f9;
+}
+
+.summary{
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid #edf1f5;
+  margin-top:15px;
+}
+
+.summary-row{
+  display:flex;
+  justify-content:space-between;
+  padding:13px 15px;
+  background:white;
+  border-bottom:1px solid #edf1f5;
+  font-size:14px;
+}
+
+.summary-row:last-child{
+  border-bottom:0;
+}
+
+.summary-row span:first-child{
+  color:#64748b;
+}
+
+.summary-row span:last-child{
+  font-weight:700;
+}
+
+.success{
+  text-align:center;
+  padding:15px 0 5px;
+}
+
+.success-icon{
+  width:80px;
+  height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 15px;
+  border-radius:50%;
+  font-size:38px;
+  background:linear-gradient(135deg,#d9fff0,#dff8ff);
+}
+
+.success h2{
+  font-size:24px;
+}
+
+.success p{
+  color:#64748b;
+  font-size:14px;
+  margin-top:6px;
+  line-height:1.6;
+}
+
+.footer{
+  text-align:center;
+  color:#94a3b8;
+  font-size:11px;
+  margin-top:15px;
+}
+</style>
 </head>
 
 <body>
 
-  <main class="container">
+<div class="bg-circle c1"></div>
+<div class="bg-circle c2"></div>
 
-    <section class="card">
+<div class="app">
 
-      <div class="badge">🎁 กิจกรรมพิเศษ</div>
+  <div class="header">
+    <div class="logo">LUNA<span>GIVEAWAY</span></div>
+    <div class="status">● กิจกรรมเปิดอยู่</div>
+  </div>
 
-      <h1>แจกเพชรฟรี</h1>
+  <div class="progress-wrap">
+    <div class="progress">
+      <div id="progressBar" class="progress-bar"></div>
+    </div>
 
-      <div class="subtitle">
-        กรอก UID เพื่อเข้าร่วมกิจกรรม
-      </div>
+    <div class="steps">
+      <span id="step1" class="active">UID</span>
+      <span id="step2">กิจกรรม</span>
+      <span id="step3">หลักฐาน</span>
+      <span id="step4">เสร็จสิ้น</span>
+    </div>
+  </div>
 
-      <!-- รูปเพชร -->
-      <div class="diamond-box">
+  <div class="card">
+
+    <!-- PAGE 1 -->
+    <section id="page1" class="page active">
+
+      <div class="badge">🎁 FREE FIRE EVENT</div>
+
+      <h1>แจกเพชรฟรี<br>5,100 💎</h1>
+
+      <p class="subtitle">
+        กรอก UID เกมของคุณเพื่อเข้าร่วมกิจกรรม
+      </p>
+
+      <div class="reward-box">
 
         <img
-          class="diamond-img"
+          class="diamond"
           src="https://i.ibb.co/SDFZYqDP/57-FC00-F1-DA29-45-D2-B7-A0-C73-DE3-DB7760.png"
-          alt="Free Fire Diamonds"
+          alt="5,100 Diamonds"
         >
 
         <div class="amount">
-          5,100 <span>💎</span>
+          5,100 <small>💎</small>
         </div>
 
-        <div class="reward">
-          รางวัลกิจกรรมแจกเพชรฟรี
+        <div class="reward-text">
+          รางวัลสำหรับผู้เข้าร่วมกิจกรรม
         </div>
 
       </div>
 
-      <!-- กรอก UID -->
-      <div class="form-title">
-        🎮 UID เกมของคุณ
-      </div>
+      <label class="label">🎮 UID เกมของคุณ</label>
 
       <input
         id="uid"
@@ -280,59 +517,418 @@
         placeholder="กรอก UID Free Fire"
       >
 
-      <button class="button" onclick="submitUID()">
+      <button class="btn btn-primary" onclick="goToTask()">
         ดำเนินการต่อ →
       </button>
 
-      <div class="notice">
-        กรุณาตรวจสอบ UID ให้ถูกต้องก่อนดำเนินการต่อ
+      <div class="info">
+        🔒 เราจะใช้ UID สำหรับระบุบัญชีเกมที่เข้าร่วมกิจกรรมเท่านั้น
       </div>
 
-      <!-- ผลลัพธ์ -->
-      <div id="result" class="result">
+    </section>
 
-        <div class="result-title">
-          ✅ รับข้อมูลเรียบร้อย
+
+    <!-- PAGE 2 -->
+    <section id="page2" class="page">
+
+      <div class="badge">STEP 2 · ทำภารกิจ</div>
+
+      <h1>ทำภารกิจ<br>เพื่อยืนยันสิทธิ์</h1>
+
+      <p class="subtitle">
+        ทำตามขั้นตอนด้านล่าง แล้วส่งภาพหลักฐาน
+      </p>
+
+      <div class="image-card">
+
+        <img
+          class="activity-img"
+          src="https://i.ibb.co/n4CQY6H/IMG-3217.jpg"
+          alt="ภาพกิจกรรม"
+        >
+
+        <button
+          class="btn btn-secondary"
+          onclick="openActivityImage()"
+        >
+          🖼️ เปิดรูปภาพ
+        </button>
+
+      </div>
+
+      <div class="task">
+        <div class="task-number">1</div>
+        <div>
+          <strong>บันทึกรูปกิจกรรม</strong>
+          <p>เปิดรูปด้านบนและบันทึกลงในโทรศัพท์</p>
+        </div>
+      </div>
+
+      <div class="task">
+        <div class="task-number">2</div>
+        <div>
+          <strong>ตั้งเป็นหน้าจอล็อก</strong>
+          <p>นำรูปไปตั้งเป็นภาพหน้าจอล็อกโทรศัพท์</p>
+        </div>
+      </div>
+
+      <div class="task">
+        <div class="task-number">3</div>
+        <div>
+          <strong>แคปหน้าจอเป็นหลักฐาน</strong>
+          <p>ถ่ายภาพหน้าจอที่แสดงว่าตั้งรูปเรียบร้อยแล้ว</p>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" onclick="goToUpload()">
+        ทำภารกิจเสร็จแล้ว →
+      </button>
+
+      <button class="btn btn-secondary" onclick="showPage(1)">
+        ← กลับ
+      </button>
+
+    </section>
+
+
+    <!-- PAGE 3 -->
+    <section id="page3" class="page">
+
+      <div class="badge">STEP 3 · ส่งหลักฐาน</div>
+
+      <h1>อัปโหลด<br>ภาพหลักฐาน</h1>
+
+      <p class="subtitle">
+        เลือกภาพหน้าจอที่แสดงหลักฐานการทำภารกิจ
+      </p>
+
+      <div class="summary">
+
+        <div class="summary-row">
+          <span>UID</span>
+          <span id="summaryUid">-</span>
         </div>
 
-        <p>
-          UID:
-          <span id="uidResult" class="uid-value"></span>
-        </p>
+        <div class="summary-row">
+          <span>รางวัล</span>
+          <span>5,100 💎</span>
+        </div>
+
+      </div>
+
+      <div class="upload">
+
+        <div class="upload-icon">📸</div>
+
+        <strong>เลือกภาพหลักฐาน</strong>
+
+        <p>JPG, JPEG หรือ PNG</p>
+
+        <input
+          id="proof"
+          type="file"
+          accept="image/jpeg,image/png,image/jpg"
+          onchange="previewImage(event)"
+        >
+
+      </div>
+
+      <div id="preview" class="preview">
+        <img id="previewImg" alt="ตัวอย่างหลักฐาน">
+      </div>
+
+      <button
+        id="submitBtn"
+        class="btn btn-primary"
+        onclick="submitProof()"
+      >
+        📤 ส่งหลักฐาน
+      </button>
+
+      <button
+        class="btn btn-secondary"
+        onclick="showPage(2)"
+      >
+        ← กลับ
+      </button>
+
+      <div class="info">
+        🔒 ภาพหลักฐานจะถูกส่งให้ระบบของกิจกรรมเพื่อใช้ตรวจสอบ
+      </div>
+
+    </section>
+
+
+    <!-- PAGE 4 -->
+    <section id="page4" class="page">
+
+      <div class="success">
+
+        <div class="success-icon">
+          ✅
+        </div>
+
+        <h2>ส่งหลักฐานสำเร็จ!</h2>
 
         <p>
-          รางวัล:
-          <span class="uid-value">5,100 💎</span>
+          ระบบได้รับข้อมูลของคุณแล้ว
+          <br>
+          กรุณารอทีมงานตรวจสอบกิจกรรม
         </p>
+
+        <div class="summary">
+
+          <div class="summary-row">
+            <span>UID</span>
+            <span id="finalUid">-</span>
+          </div>
+
+          <div class="summary-row">
+            <span>รางวัล</span>
+            <span>5,100 💎</span>
+          </div>
+
+          <div class="summary-row">
+            <span>สถานะ</span>
+            <span style="color:#16a34a">รอตรวจสอบ</span>
+          </div>
+
+        </div>
+
+        <button
+          class="btn btn-primary"
+          onclick="location.reload()"
+        >
+          กลับหน้าหลัก
+        </button>
 
       </div>
 
     </section>
 
-  </main>
+  </div>
 
-  <script>
-    function submitUID() {
+  <div class="footer">
+    Free Fire Giveaway • กิจกรรมแจกเพชร 5,100 💎
+  </div>
 
-      const uidInput = document.getElementById("uid");
-      const uid = uidInput.value.trim();
+</div>
 
-      if (!uid) {
-        alert("กรุณากรอก UID ก่อน");
-        uidInput.focus();
-        return;
-      }
 
-      if (!/^[0-9]+$/.test(uid)) {
-        alert("UID ต้องเป็นตัวเลขเท่านั้น");
-        uidInput.focus();
-        return;
-      }
+<script>
 
-      document.getElementById("uidResult").textContent = uid;
-      document.getElementById("result").classList.add("show");
+let userUID = "";
+let selectedFile = null;
+
+function updateProgress(step){
+
+  const widths = {
+    1:"25%",
+    2:"50%",
+    3:"75%",
+    4:"100%"
+  };
+
+  document.getElementById("progressBar").style.width = widths[step];
+
+  for(let i=1;i<=4;i++){
+
+    const el = document.getElementById("step"+i);
+
+    if(i <= step){
+      el.classList.add("active");
+    }else{
+      el.classList.remove("active");
     }
-  </script>
+
+  }
+}
+
+
+function showPage(number){
+
+  document.querySelectorAll(".page").forEach(page=>{
+    page.classList.remove("active");
+  });
+
+  document.getElementById("page"+number).classList.add("active");
+
+  updateProgress(number);
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+}
+
+
+function goToTask(){
+
+  const input = document.getElementById("uid");
+  const uid = input.value.trim();
+
+  if(!uid){
+
+    alert("กรุณากรอก UID ก่อน");
+    input.focus();
+    return;
+
+  }
+
+  if(!/^[0-9]+$/.test(uid)){
+
+    alert("UID ต้องเป็นตัวเลขเท่านั้น");
+    input.focus();
+    return;
+
+  }
+
+  if(uid.length < 5){
+
+    alert("กรุณาตรวจสอบ UID อีกครั้ง");
+    input.focus();
+    return;
+
+  }
+
+  userUID = uid;
+
+  document.getElementById("summaryUid").textContent = uid;
+
+  showPage(2);
+}
+
+
+function openActivityImage(){
+
+  window.open(
+    "https://i.ibb.co/n4CQY6H/IMG-3217.jpg",
+    "_blank"
+  );
+
+}
+
+
+function goToUpload(){
+
+  showPage(3);
+
+}
+
+
+function previewImage(event){
+
+  const file = event.target.files[0];
+
+  if(!file) return;
+
+  const allowed = [
+    "image/jpeg",
+    "image/png",
+    "image/jpg"
+  ];
+
+  if(!allowed.includes(file.type)){
+
+    alert("กรุณาเลือกไฟล์ JPG หรือ PNG");
+    event.target.value = "";
+    return;
+
+  }
+
+  if(file.size > 10 * 1024 * 1024){
+
+    alert("ไฟล์ต้องมีขนาดไม่เกิน 10MB");
+    event.target.value = "";
+    return;
+
+  }
+
+  selectedFile = file;
+
+  const reader = new FileReader();
+
+  reader.onload = function(e){
+
+    document.getElementById("previewImg").src = e.target.result;
+
+    document.getElementById("preview").style.display = "block";
+
+  };
+
+  reader.readAsDataURL(file);
+
+}
+
+
+async function submitProof(){
+
+  if(!selectedFile){
+
+    alert("กรุณาเลือกภาพหลักฐานก่อน");
+    return;
+
+  }
+
+  const button = document.getElementById("submitBtn");
+
+  button.disabled = true;
+  button.textContent = "⏳ กำลังส่งหลักฐาน...";
+
+  try{
+
+    /*
+      ตรงนี้ให้ Backend ของคุณรับข้อมูล
+      แล้ว Backend เป็นผู้ส่งต่อไป Telegram
+
+      ตัวอย่าง API:
+      POST /api/submit
+
+      FormData:
+      uid
+      reward
+      proof
+    */
+
+    const formData = new FormData();
+
+    formData.append("uid", userUID);
+    formData.append("reward", "5100");
+    formData.append("proof", selectedFile);
+
+    const response = await fetch("/api/submit",{
+      method:"POST",
+      body:formData
+    });
+
+    if(!response.ok){
+      throw new Error("ส่งข้อมูลไม่สำเร็จ");
+    }
+
+    document.getElementById("finalUid").textContent = userUID;
+
+    showPage(4);
+
+  }catch(error){
+
+    /*
+      ถ้ายังไม่มี Backend ให้เอา alert นี้ออก
+      หลังจากสร้าง /api/submit แล้วระบบจะส่งจริง
+    */
+
+    alert(
+      "ตอนนี้ยังไม่ได้เชื่อมต่อระบบส่งหลักฐาน\n\n" +
+      "กรุณาสร้าง /api/submit ฝั่ง Backend ก่อน"
+    );
+
+    button.disabled = false;
+    button.textContent = "📤 ส่งหลักฐาน";
+
+  }
+
+}
+
+</script>
 
 </body>
 </html>
