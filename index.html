@@ -22,8 +22,6 @@
   --pink2:#ff8dcc;
   --blue:#7ddcff;
   --blue2:#b9efff;
-  --dark:#111827;
-  --muted:#64748b;
 }
 
 body{
@@ -44,29 +42,14 @@ body{
   z-index:-1;
 }
 
-.c1{
-  width:220px;
-  height:220px;
-  background:#ff8dcc;
-  left:-100px;
-  top:100px;
-  opacity:.35;
-}
-
-.c2{
-  width:250px;
-  height:250px;
-  background:#7ddcff;
-  right:-100px;
-  bottom:80px;
-  opacity:.4;
-}
+.c1{width:220px;height:220px;background:#ff8dcc;left:-100px;top:100px;opacity:.35}
+.c2{width:250px;height:250px;background:#7ddcff;right:-100px;bottom:80px;opacity:.4}
 
 .app{
   width:100%;
   max-width:480px;
   margin:auto;
-  padding:18px 15px 35px;
+  padding:18px 15px 40px;
 }
 
 .header{
@@ -76,14 +59,8 @@ body{
   margin-bottom:15px;
 }
 
-.logo{
-  font-size:20px;
-  font-weight:800;
-}
-
-.logo span{
-  color:var(--pink);
-}
+.logo{font-size:20px;font-weight:800}
+.logo span{color:var(--pink)}
 
 .status{
   padding:6px 11px;
@@ -95,9 +72,7 @@ body{
   box-shadow:0 5px 20px rgba(80,100,130,.08);
 }
 
-.progress-wrap{
-  margin-bottom:16px;
-}
+.progress-wrap{margin-bottom:16px}
 
 .progress{
   height:8px;
@@ -123,10 +98,7 @@ body{
   font-size:11px;
 }
 
-.steps .active{
-  color:var(--pink);
-  font-weight:700;
-}
+.steps .active{color:var(--pink);font-weight:700}
 
 .card{
   background:rgba(255,255,255,.88);
@@ -137,24 +109,12 @@ body{
   box-shadow:0 20px 55px rgba(70,100,130,.13);
 }
 
-.page{
-  display:none;
-}
-
-.page.active{
-  display:block;
-  animation:fade .35s ease;
-}
+.page{display:none}
+.page.active{display:block;animation:fade .35s ease}
 
 @keyframes fade{
-  from{
-    opacity:0;
-    transform:translateY(10px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:translateY(0)}
 }
 
 .badge{
@@ -168,11 +128,7 @@ body{
   margin-bottom:10px;
 }
 
-h1{
-  font-size:29px;
-  line-height:1.2;
-  font-weight:800;
-}
+h1{font-size:28px;line-height:1.25;font-weight:800}
 
 .subtitle{
   color:#64748b;
@@ -186,11 +142,7 @@ h1{
   border-radius:23px;
   padding:17px;
   margin-bottom:20px;
-  background:linear-gradient(
-    145deg,
-    rgba(255,218,238,.75),
-    rgba(216,248,255,.85)
-  );
+  background:linear-gradient(145deg,rgba(255,218,238,.75),rgba(216,248,255,.85));
 }
 
 .diamond{
@@ -217,22 +169,11 @@ h1{
   color:transparent;
 }
 
-.amount small{
-  font-size:23px;
-}
+.amount small{font-size:23px}
 
-.reward-text{
-  color:#64748b;
-  font-size:13px;
-  margin-top:5px;
-}
+.reward-text{color:#64748b;font-size:13px;margin-top:5px}
 
-.label{
-  display:block;
-  font-weight:600;
-  margin-bottom:8px;
-  font-size:15px;
-}
+.label{display:block;font-weight:600;margin-bottom:8px;font-size:15px}
 
 .input{
   width:100%;
@@ -265,8 +206,12 @@ h1{
   transition:.2s;
 }
 
-.btn:hover{
-  transform:translateY(-2px);
+.btn:hover{transform:translateY(-2px)}
+
+.btn:disabled{
+  opacity:.45;
+  cursor:not-allowed;
+  transform:none !important;
 }
 
 .btn-primary{
@@ -283,12 +228,17 @@ h1{
 
 .btn-instagram{
   color:white;
-  background:linear-gradient(
-    90deg,
-    #f58529,
-    #dd2a7b,
-    #8134af
-  );
+  background:linear-gradient(90deg,#f58529,#dd2a7b,#8134af);
+}
+
+.btn-facebook{
+  color:white;
+  background:linear-gradient(90deg,#1877f2,#0a5dc7);
+}
+
+.btn-messenger{
+  color:white;
+  background:linear-gradient(90deg,#00b2ff,#006aff);
 }
 
 .info{
@@ -299,67 +249,6 @@ h1{
   color:#64748b;
   font-size:12px;
   line-height:1.6;
-}
-
-.image-card{
-  background:#f8fafc;
-  border-radius:19px;
-  padding:12px;
-  margin:15px 0;
-  text-align:center;
-}
-
-.activity-img{
-  width:100%;
-  max-width:100%;
-  height:auto;
-  object-fit:contain;
-  border-radius:13px;
-  display:block;
-}
-
-.choice-box{
-  margin:18px 0 10px;
-}
-
-.choice-title{
-  font-size:18px;
-  font-weight:700;
-  margin-bottom:12px;
-  text-align:center;
-}
-
-.choice-btn{
-  width:100%;
-  padding:16px 14px;
-  margin-bottom:10px;
-  border:2px solid #ffd0e6;
-  border-radius:16px;
-  background:#fff;
-  font-family:inherit;
-  font-size:15px;
-  font-weight:600;
-  color:#172033;
-  cursor:pointer;
-  transition:.2s;
-  text-align:left;
-}
-
-.choice-btn:hover,
-.choice-btn.selected{
-  border-color:#ff4fa3;
-  background:#fff0f8;
-  color:#e83d91;
-}
-
-.reason-box{
-  display:none;
-  margin-top:15px;
-}
-
-.reason-box.show{
-  display:block;
-  animation:fade .3s ease;
 }
 
 .summary{
@@ -378,22 +267,11 @@ h1{
   font-size:14px;
 }
 
-.summary-row:last-child{
-  border-bottom:0;
-}
+.summary-row:last-child{border-bottom:0}
+.summary-row span:first-child{color:#64748b}
+.summary-row span:last-child{font-weight:700}
 
-.summary-row span:first-child{
-  color:#64748b;
-}
-
-.summary-row span:last-child{
-  font-weight:700;
-}
-
-.success{
-  text-align:center;
-  padding:15px 0 5px;
-}
+.success{text-align:center;padding:15px 0 5px}
 
 .success-icon{
   width:80px;
@@ -407,66 +285,365 @@ h1{
   background:linear-gradient(135deg,#d9fff0,#dff8ff);
 }
 
-.success h2{
-  font-size:24px;
+.success h2{font-size:24px}
+.success p{color:#64748b;font-size:14px;margin-top:6px;line-height:1.6}
+
+.footer{text-align:center;color:#94a3b8;font-size:11px;margin-top:18px}
+
+.step-card{
+  background:#fff;
+  border:1px solid #edf1f5;
+  border-radius:18px;
+  padding:16px;
+  margin-bottom:14px;
+  box-shadow:0 6px 20px rgba(0,0,0,.04);
 }
 
-.success p{
-  color:#64748b;
-  font-size:14px;
-  margin-top:6px;
-  line-height:1.6;
-}
+.step-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
 
-.footer{
-  text-align:center;
-  color:#94a3b8;
-  font-size:11px;
-  margin-top:15px;
-}
-
-.final-steps{
-  text-align:left;
-  margin:20px 0;
-  padding:15px;
-  background:#f8fafc;
-  border-radius:16px;
-}
-
-.final-steps h3{
+.step-num{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#ff5ca8,#6ad8f4);
+  color:white;
+  font-weight:800;
   font-size:16px;
-  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+
+.step-title{font-size:16px;font-weight:700;line-height:1.3}
+.step-desc{color:#64748b;font-size:13px;line-height:1.5;margin-bottom:12px}
+
+.check-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top:10px;
+  font-size:13px;
+  color:#475569;
+}
+
+.reward-preview{
+  text-align:center;
+  background:linear-gradient(145deg,rgba(255,218,238,.7),rgba(216,248,255,.8));
+  border-radius:20px;
+  padding:18px;
+  margin:15px 0;
+}
+
+.reward-preview img{
+  width:160px;
+  max-width:70%;
+  display:block;
+  margin:0 auto 10px;
+  filter:drop-shadow(0 8px 15px rgba(66,188,230,.3));
+}
+
+.share-box{
+  background:#f0f9ff;
+  border:1px solid #bae6fd;
+  border-radius:16px;
+  padding:16px;
+  margin:18px 0;
+  text-align:center;
+}
+
+.share-box p{font-size:14px;color:#0369a1;margin-bottom:12px;line-height:1.5}
+
+.final-pretty{
+  background:linear-gradient(145deg,#fff0f8,#e0f7ff);
+  border-radius:22px;
+  padding:22px 18px;
+  margin:15px 0;
+  text-align:center;
+}
+
+.final-pretty .big-emoji{font-size:52px;margin-bottom:8px}
+.final-pretty h3{font-size:20px;margin-bottom:8px}
+.final-pretty p{color:#64748b;font-size:14px;line-height:1.6}
+
+.loading-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(8px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  z-index:9999;
+}
+
+.loading-overlay.show{display:flex}
+
+.spinner{
+  width:48px;
+  height:48px;
+  border:4px solid #f1f5f9;
+  border-top:4px solid #ff4fa3;
+  border-radius:50%;
+  animation:spin .85s linear infinite;
+}
+
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.loading-text{margin-top:16px;font-size:15px;font-weight:600;color:#64748b}
+.loading-sub{margin-top:6px;font-size:12px;color:#94a3b8}
+
+.queue-box{
+  background:#fff7ed;
+  border:1px solid #fed7aa;
+  border-radius:16px;
+  padding:14px 16px;
+  margin:15px 0;
+  text-align:center;
+}
+
+.queue-box .queue-num{font-size:28px;font-weight:800;color:#ea580c;margin:4px 0}
+
+.countdown-box{
+  background:#fef2f2;
+  border:1px solid #fecaca;
+  border-radius:16px;
+  padding:16px;
+  margin:15px 0;
+  text-align:center;
+}
+
+.countdown-box .label-cd{
+  font-size:13px;
+  color:#b91c1c;
+  margin-bottom:6px;
+}
+
+.countdown-box .timer{
+  font-size:36px;
+  font-weight:800;
+  color:#dc2626;
+  letter-spacing:2px;
+  font-variant-numeric:tabular-nums;
+}
+
+.countdown-box .sub-cd{
+  font-size:12px;
+  color:#9f1239;
+  margin-top:6px;
+}
+
+.warning-text{
+  background:#fef2f2;
+  border:1px solid #fecaca;
+  border-radius:14px;
+  padding:12px;
+  margin-top:12px;
+  font-size:13px;
+  color:#b91c1c;
+  line-height:1.5;
+  text-align:left;
+}
+
+/* ===== แบนเนอร์ LunaTopup ด้านล่าง (สวยเต็มรอบ) ===== */
+.promo-bottom{
+  display:block;
+  margin-top:22px;
+  border-radius:20px;
+  overflow:hidden;
+  text-decoration:none;
+  background:linear-gradient(135deg,#7c3aed 0%,#db2777 50%,#f97316 100%);
+  box-shadow:0 12px 30px rgba(124,58,237,.28);
+  transition:.25s;
+}
+
+.promo-bottom:hover{
+  transform:translateY(-3px);
+  box-shadow:0 16px 36px rgba(124,58,237,.35);
+}
+
+.promo-inner{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:16px 18px;
+  color:white;
+}
+
+.promo-logo{
+  width:52px;
+  height:52px;
+  border-radius:14px;
+  object-fit:cover;
+  background:white;
+  flex-shrink:0;
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+
+.promo-text{
+  flex:1;
+}
+
+.promo-text .name{
+  font-size:17px;
+  font-weight:800;
+  letter-spacing:.3px;
+}
+
+.promo-text .desc{
+  font-size:12px;
+  opacity:.92;
+  margin-top:3px;
+  line-height:1.4;
+}
+
+.promo-arrow{
+  font-size:22px;
+  opacity:.9;
+}
+
+/* หน้าบังคับเปิดเบราว์เซอร์ภายนอก */
+.external-browser{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:linear-gradient(160deg,#fff5fb,#eefdff);
+  z-index:10000;
+  overflow-y:auto;
+  padding:20px 16px 40px;
+}
+
+.external-browser.show{display:block}
+
+.ext-card{
+  max-width:440px;
+  margin:0 auto;
+  background:rgba(255,255,255,.95);
+  border-radius:24px;
+  padding:24px 20px;
+  box-shadow:0 20px 50px rgba(0,0,0,.1);
+}
+
+.ext-badge{
+  display:inline-block;
+  background:linear-gradient(90deg,#ffe1f1,#dff8ff);
   color:#e83d91;
+  font-size:12px;
+  font-weight:700;
+  padding:6px 14px;
+  border-radius:30px;
+  margin-bottom:12px;
 }
 
-.final-steps ol{
-  padding-left:20px;
-  color:#334155;
-  font-size:14px;
-  line-height:1.8;
+.ext-title{font-size:24px;font-weight:800;line-height:1.3;margin-bottom:8px}
+.ext-sub{color:#64748b;font-size:14px;margin-bottom:18px;line-height:1.5}
+
+.ext-reward{
+  text-align:center;
+  background:linear-gradient(145deg,rgba(255,218,238,.75),rgba(216,248,255,.85));
+  border-radius:18px;
+  padding:16px;
+  margin-bottom:20px;
 }
 
-.final-steps li{
+.ext-reward .amt{
+  font-size:32px;
+  font-weight:800;
+  background:linear-gradient(90deg,#ff3f99,#36bde8);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.ext-section{
+  background:#fff;
+  border:1px solid #edf1f5;
+  border-radius:16px;
+  padding:16px;
+  margin-bottom:14px;
+}
+
+.ext-section h3{
+  font-size:15px;
+  font-weight:700;
+  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.ext-step{
+  display:flex;
+  gap:12px;
+  margin-bottom:12px;
+  align-items:flex-start;
+}
+
+.ext-step .num{
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#ff5ca8,#6ad8f4);
+  color:white;
+  font-size:13px;
+  font-weight:800;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+
+.ext-step p{font-size:13px;line-height:1.5;color:#334155}
+
+.ext-note{
+  background:#fef3c7;
+  border:1px solid #fcd34d;
+  border-radius:12px;
+  padding:12px;
+  font-size:12px;
+  color:#92400e;
+  line-height:1.5;
+  margin-top:10px;
+}
+
+.fail-box{
+  background:#fef2f2;
+  border:2px solid #f87171;
+  border-radius:18px;
+  padding:20px 16px;
+  margin:15px 0;
+  text-align:center;
+  display:none;
+}
+
+.fail-box.show{display:block}
+
+.fail-box .fail-icon{font-size:42px;margin-bottom:8px}
+.fail-box h3{font-size:18px;color:#b91c1c;margin-bottom:8px}
+.fail-box p{font-size:14px;color:#7f1d1d;line-height:1.5}
+
+/* กล่องทัก IG ขอเพชร */
+.ig-claim-box{
+  background:linear-gradient(135deg,#fdf2f8,#fce7f3);
+  border:1px solid #f9a8d4;
+  border-radius:18px;
+  padding:18px 16px;
+  margin:16px 0;
+  text-align:center;
+}
+
+.ig-claim-box h3{
+  font-size:16px;
+  font-weight:700;
+  color:#be185d;
   margin-bottom:8px;
 }
 
-.big-cap{
-  text-align:center;
-  padding:25px 15px;
-  background:linear-gradient(145deg,rgba(255,218,238,.6),rgba(216,248,255,.7));
-  border-radius:20px;
-  margin:20px 0;
-}
-
-.big-cap .emoji{
-  font-size:48px;
-  margin-bottom:10px;
-}
-
-.big-cap p{
-  font-size:16px;
-  font-weight:600;
-  line-height:1.5;
+.ig-claim-box p{
+  font-size:13px;
+  color:#9d174d;
+  line-height:1.55;
+  margin-bottom:14px;
 }
 </style>
 </head>
@@ -476,7 +653,60 @@ h1{
 <div class="bg-circle c1"></div>
 <div class="bg-circle c2"></div>
 
-<div class="app">
+<!-- Loading -->
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="spinner"></div>
+  <div class="loading-text">กำลังโหลด...</div>
+  <div class="loading-sub">กรุณารอสักครู่</div>
+</div>
+
+<!-- บังคับเปิดเบราว์เซอร์ภายนอก -->
+<div class="external-browser" id="externalBrowser">
+  <div class="ext-card">
+    <div class="ext-badge">⚠️ สำคัญมาก</div>
+    <div class="ext-title">กรุณาเปิดในเบราว์เซอร์ภายนอก</div>
+    <div class="ext-sub">
+      กรุณาทำตามขั้นตอนด้านล่างเพื่อรับรางวัล<br>
+      (Facebook บล็อกการแชร์ Messenger ถ้าเปิดในแอป)
+    </div>
+
+    <div class="ext-reward">
+      <div style="font-size:13px;color:#64748b;margin-bottom:4px;">รางวัลที่คุณจะได้รับ</div>
+      <div class="amt">5,100 เพชร 💎</div>
+    </div>
+
+    <div class="ext-section">
+      <h3>📱 iPhone / iPad</h3>
+      <div class="ext-step">
+        <div class="num">1</div>
+        <p>กดที่สัญลักษณ์จุดสามจุด <strong>⋯</strong><br>มุมขวาบน หรือมุมขวาล่างของหน้าจอ</p>
+      </div>
+      <div class="ext-step">
+        <div class="num">2</div>
+        <p>เลือกเมนู<br><strong>Open in Safari</strong> หรือ <strong>เปิดในเบราว์เซอร์</strong></p>
+      </div>
+    </div>
+
+    <div class="ext-section">
+      <h3>🤖 Android</h3>
+      <div class="ext-step">
+        <div class="num">1</div>
+        <p>กดที่สัญลักษณ์จุดสามจุด <strong>⋮</strong><br>มุมขวาบนของหน้าจอ</p>
+      </div>
+      <div class="ext-step">
+        <div class="num">2</div>
+        <p>เลือกเมนู<br><strong>Open in browser</strong> / <strong>เปิดในเบราว์เซอร์</strong><br>หรือ <strong>Chrome</strong></p>
+      </div>
+    </div>
+
+    <div class="ext-note">
+      เมื่อเปิดในเบราว์เซอร์ภายนอกแล้ว คุณจะสามารถรับรางวัลได้ทันที<br>
+      และปุ่มแชร์ Messenger จะทำงานปกติ
+    </div>
+  </div>
+</div>
+
+<div class="app" id="mainApp">
 
   <div class="header">
     <div class="logo">LUNA<span>GIVEAWAY</span></div>
@@ -487,12 +717,11 @@ h1{
     <div class="progress">
       <div id="progressBar" class="progress-bar"></div>
     </div>
-
     <div class="steps">
       <span id="step1" class="active">UID</span>
-      <span id="step2">เลือก</span>
-      <span id="step3">แคป</span>
-      <span id="step4">เสร็จสิ้น</span>
+      <span id="step2">ยืนยัน</span>
+      <span id="step3">แชร์</span>
+      <span id="step4">เสร็จ</span>
     </div>
   </div>
 
@@ -500,414 +729,339 @@ h1{
 
     <!-- หน้า 1 -->
     <section id="page1" class="page active">
-
       <div class="badge">🎁 FREE FIRE EVENT</div>
-
       <h1>แจกเพชรฟรี<br>5,100 💎</h1>
-
-      <p class="subtitle">
-        กรอก UID เกมของคุณเพื่อเข้าร่วมกิจกรรม
-      </p>
+      <p class="subtitle">กรอก UID เกมของคุณเพื่อเข้าร่วมกิจกรรม</p>
 
       <div class="reward-box">
-
-        <img
-          class="diamond"
-          src="https://i.ibb.co/SDFZYqDP/57-FC00-F1-DA29-45-D2-B7-A0-C73-DE3-DB7760.png"
-          alt="5,100 Diamonds"
-        >
-
-        <div class="amount">
-          5,100 <small>💎</small>
-        </div>
-
-        <div class="reward-text">
-          รางวัลสำหรับผู้เข้าร่วมกิจกรรม
-        </div>
-
+        <img class="diamond" src="https://i.ibb.co/SDFZYqDP/57-FC00-F1-DA29-45-D2-B7-A0-C73-DE3-DB7760.png" alt="5,100 Diamonds">
+        <div class="amount">5,100 <small>💎</small></div>
+        <div class="reward-text">รางวัลสำหรับผู้เข้าร่วมกิจกรรม</div>
       </div>
 
       <label class="label">🎮 UID เกมของคุณ</label>
+      <input id="uid" class="input" type="text" inputmode="numeric" maxlength="20" placeholder="กรอก UID Free Fire">
 
-      <input
-        id="uid"
-        class="input"
-        type="text"
-        inputmode="numeric"
-        maxlength="20"
-        placeholder="กรอก UID Free Fire"
-      >
-
-      <button class="btn btn-primary" onclick="goToTask()">
-        ดำเนินการต่อ →
-      </button>
-
-      <div class="info">
-        🔒 กรุณาตรวจสอบ UID ให้ถูกต้องก่อนดำเนินการต่อ
-      </div>
-
+      <button class="btn btn-primary" onclick="goToTask()">ดำเนินการต่อ →</button>
+      <div class="info">🔒 กรุณาตรวจสอบ UID ให้ถูกต้องก่อนดำเนินการต่อ</div>
     </section>
 
     <!-- หน้า 2 -->
     <section id="page2" class="page">
+      <div class="badge">STEP 2 · ยืนยันสิทธิ์</div>
+      <h1>ทำตาม 2 ขั้นตอน<br>เพื่อรับเพชร</h1>
+      <p class="subtitle">ต้องกดปุ่มทั้งสองอันก่อน ถึงจะไปต่อได้</p>
 
-      <div class="badge">STEP 2 · เลือกคำตอบ</div>
-
-      <h1>คิดว่าคนในรูป<br>สวยไหม?</h1>
-
-      <p class="subtitle">
-        ดูรูปแล้วเลือกคำตอบที่ใช่ที่สุด
-      </p>
-
-      <div class="image-card">
-        <img
-          class="activity-img"
-          src="https://i.ibb.co/qGzX0vJ/IMG-3217.jpg"
-          alt="รูปกิจกรรม"
-          width="1064"
-          height="1465"
-          style="max-width:100%;height:auto;"
-        >
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-num">1</div>
+          <div class="step-title">ติดตาม IG + กดไลค์โพสต์ล่าสุด</div>
+        </div>
+        <div class="step-desc">กดติดตามบัญชี IG นี้ แล้วไปกดไลค์โพสต์ล่าสุดให้เรียบร้อย</div>
+        <button class="btn btn-instagram" id="btnIG" onclick="clickIG()">📸 เปิด IG ติดตาม + ไลค์เลย</button>
+        <div class="check-row" id="checkIG" style="display:none;">
+          <span style="color:#16a34a;font-weight:700;">✓ กดแล้ว</span>
+        </div>
       </div>
 
-      <div class="choice-box">
-        <div class="choice-title">เลือกคำตอบ</div>
-
-        <button class="choice-btn" id="choice1" onclick="selectChoice(1)">
-          1. สวยมากๆ เห็นแล้วเงี่ยน
-        </button>
-
-        <button class="choice-btn" id="choice2" onclick="selectChoice(2)">
-          2. สวยโคตรน่าเย็ด
-        </button>
+      <div class="step-card">
+        <div class="step-header">
+          <div class="step-num">2</div>
+          <div class="step-title">แชร์โพสต์ลงกลุ่ม 10 กลุ่ม</div>
+        </div>
+        <div class="step-desc">กดแชร์โพสต์นี้ลงกลุ่ม Facebook อย่างน้อย 10 กลุ่ม</div>
+        <button class="btn btn-facebook" id="btnFB" onclick="clickFB()">📢 เปิดโพสต์แล้วแชร์เลย</button>
+        <div class="check-row" id="checkFB" style="display:none;">
+          <span style="color:#16a34a;font-weight:700;">✓ กดแล้ว</span>
+        </div>
       </div>
 
-      <div class="reason-box" id="reasonBox">
-        <label class="label" id="reasonLabel">เขียนเหตุผล</label>
-        <input
-          id="reasonInput"
-          class="input"
-          type="text"
-          placeholder=""
-        >
-      </div>
-
-      <button
-        class="btn btn-primary"
-        id="nextBtn"
-        onclick="goToUpload()"
-        style="display:none;"
-      >
-        ส่งคำตอบแล้วไปต่อ →
-      </button>
-
-      <button
-        class="btn btn-secondary"
-        onclick="showPage(1)"
-      >
-        ← กลับ
-      </button>
-
+      <button class="btn btn-primary" id="btnNext2" onclick="goToShare()" disabled>ทำครบแล้ว ไปต่อ →</button>
+      <button class="btn btn-secondary" onclick="showPage(1)">← กลับ</button>
     </section>
 
-    <!-- หน้า 3 ใหม่หมด -->
+    <!-- หน้า 3 -->
     <section id="page3" class="page">
+      <div class="badge">STEP 3 · ยืนยันขั้นสุดท้าย</div>
+      <h1>ข้อมูลที่คุณจะได้</h1>
+      <p class="subtitle">ต้องกดแชร์ลิงก์ก่อน ถึงจะยืนยันได้</p>
 
-      <div class="badge">STEP 3 · แคปหน้าจอ</div>
-
-      <h1>แคปหน้านี้<br>ไว้เลย</h1>
-
-      <p class="subtitle">
-        แคปหน้าจอหน้านี้ให้ชัดๆ แล้วกดปุ่มด้านล่าง
-      </p>
-
-      <div class="big-cap">
-        <div class="emoji">📸</div>
-        <p>
-          แคปหน้านี้ตอนนี้เลย<br>
-          แล้วกดปุ่ม "ถัดไป" ด้านล่าง
-        </p>
+      <div class="reward-preview">
+        <img src="https://i.ibb.co/SDFZYqDP/57-FC00-F1-DA29-45-D2-B7-A0-C73-DE3-DB7760.png" alt="เพชร">
+        <div class="amount" style="font-size:34px;">5,100 <small>💎</small></div>
+        <div style="color:#64748b;font-size:13px;margin-top:4px;">รางวัลของคุณ</div>
       </div>
 
       <div class="summary">
-        <div class="summary-row">
-          <span>UID ของคุณ</span>
-          <span id="summaryUid">-</span>
-        </div>
-        <div class="summary-row">
-          <span>รางวัล</span>
-          <span>5,100 💎</span>
-        </div>
+        <div class="summary-row"><span>UID</span><span id="summaryUid">-</span></div>
+        <div class="summary-row"><span>จำนวนเพชร</span><span>5,100 💎</span></div>
+        <div class="summary-row"><span>สถานะ</span><span style="color:#16a34a;">พร้อมรับ</span></div>
       </div>
 
-      <button class="btn btn-primary" onclick="finishActivity()">
-        แคปเสร็จแล้ว กดถัดไป →
-      </button>
+      <div class="share-box">
+        <p>
+          <strong>ขั้นตอนสุดท้าย</strong><br>
+          แชร์ลิงก์นี้ให้เพื่อนใน Messenger อย่างน้อย 10 คน<br>
+          เพื่อยืนยันสิทธิ์รับเพชร
+        </p>
+        <button class="btn btn-messenger" id="btnMessenger" onclick="clickMessenger()">💬 เปิดลิงก์แล้วแชร์เลย</button>
+        <div id="checkMessenger" style="display:none;margin-top:10px;color:#16a34a;font-weight:700;font-size:14px;">✓ กดแชร์แล้ว</div>
+      </div>
 
-      <button class="btn btn-secondary" onclick="showPage(2)">
-        ← กลับ
-      </button>
-
+      <button class="btn btn-primary" id="btnNext3" onclick="finishActivity()" disabled>แชร์ครบแล้ว กดยืนยัน →</button>
+      <button class="btn btn-secondary" onclick="showPage(2)">← กลับ</button>
     </section>
 
-    <!-- หน้า 4 สุดท้าย -->
+    <!-- หน้า 4 -->
     <section id="page4" class="page">
-
       <div class="success">
+        <div class="success-icon" id="finalIcon">💎</div>
+        <h2 id="finalTitle">เข้าคิวตรวจสอบแล้ว</h2>
+        <p id="finalDesc">ระบบรับข้อมูลของคุณเรียบร้อย<br>กำลังอยู่ในคิวตรวจสอบ</p>
 
-        <div class="success-icon">
-          ✅
+        <div class="queue-box" id="queueBox">
+          <div style="font-size:13px;color:#9a3412;">ตำแหน่งคิวของคุณ</div>
+          <div class="queue-num" id="queueNum">#42</div>
         </div>
 
-        <h2>ส่งรูปไปรับเพชร</h2>
+        <div class="countdown-box" id="countdownBox">
+          <div class="label-cd">เหลือเวลาตรวจสอบ</div>
+          <div class="timer" id="countdownTimer">30:00</div>
+          <div class="sub-cd">กรุณารอจนกว่าจะครบเวลา</div>
+        </div>
 
-        <p>
-          แคปรูปหน้านี้ + รายละเอียด<br>
-          ส่งไปที่ IG ด้านล่างเลย
-        </p>
+        <div class="fail-box" id="failBox">
+          <div class="fail-icon">❌</div>
+          <h3>คุณยังทำไม่ครบ</h3>
+          <p>ระบบตรวจพบว่าขั้นตอนยังไม่สมบูรณ์<br>กรุณาทำอีกครั้งเพื่อรับเพชร</p>
+        </div>
 
-        <div class="final-steps">
-          <h3>ทำตามนี้ (ง่ายมาก)</h3>
-          <ol>
-            <li>แคปหน้าจอหน้านี้ไว้</li>
-            <li>กดปุ่ม IG ด้านล่าง</li>
-            <li>ส่งรูปแคป + UID ของคุณ</li>
-            <li>เขียนข้อความอะไรก็ได้</li>
-            <li>รอรับเพชร 5,100 💎</li>
-          </ol>
+        <div class="final-pretty" id="waitBox">
+          <div class="big-emoji">⏳</div>
+          <h3>กรุณารอสักครู่</h3>
+          <p>
+            ทีมงานกำลังตรวจสอบทีละคิว<br>
+            อย่าปิดหน้านี้หรือออกจากระบบ<br>
+            เดี๋ยวเพชรจะเข้า UID ของคุณ
+          </p>
+        </div>
+
+        <!-- กล่องทัก IG ขอเพชร -->
+        <div class="ig-claim-box" id="igClaimBox">
+          <h3>📩 หลังครบเวลา 30 นาที</h3>
+          <p>
+            ให้ทักไปที่ IG เพื่อขอรับเพชร<br>
+            พร้อมส่ง UID + แคปหน้านี้ไปด้วย
+          </p>
+          <button class="btn btn-instagram" onclick="openIGClaim()">
+            📸 ทัก IG ขอเพชรเลย
+          </button>
         </div>
 
         <div class="summary">
+          <div class="summary-row"><span>UID</span><span id="finalUid">-</span></div>
+          <div class="summary-row"><span>รางวัล</span><span>5,100 💎</span></div>
           <div class="summary-row">
-            <span>UID</span>
-            <span id="finalUid">-</span>
-          </div>
-          <div class="summary-row">
-            <span>รางวัล</span>
-            <span>5,100 💎</span>
+            <span>สถานะ</span>
+            <span style="color:#ea580c;" id="statusText">อยู่ในคิว · กำลังนับถอยหลัง</span>
           </div>
         </div>
 
-        <button
-          class="btn btn-instagram"
-          onclick="openInstagram()"
-        >
-          📸 กดเปิด IG ส่งรูปเลย
-        </button>
+        <div class="warning-text" id="warningText">
+          ⚠️ สำคัญมาก: ต้องทำตามขั้นตอนให้ครบทุกอย่าง<br>
+          ถ้าข้ามหรือทำไม่ครบ ระบบจะตัดสิทธิ์ทันที<br>
+          เสียเวลาเปล่า ไม่ได้เพชรแน่นอน
+        </div>
 
-        <button
-          class="btn btn-primary"
-          onclick="location.reload()"
-        >
-          กลับหน้าหลัก
+        <button class="btn btn-primary" id="btnRetry" onclick="location.reload()" style="margin-top:18px;display:none;">
+          ทำใหม่อีกครั้ง
         </button>
-
       </div>
-
     </section>
 
   </div>
 
-  <div class="footer">
-    Free Fire Giveaway • 5,100 💎
-  </div>
+  <!-- แบนเนอร์ LunaTopup ด้านล่าง (สวยเต็ม) -->
+  <a href="https://lunatopup.vercel.app/" target="_blank" class="promo-bottom">
+    <div class="promo-inner">
+      <img 
+        class="promo-logo" 
+        src="https://i.ibb.co/0pCHNr2f/38-AFA269-2-A0-D-4816-B145-00-DA993-ECA78.png" 
+        alt="LunaTopup"
+      >
+      <div class="promo-text">
+        <div class="name">LunaTopup</div>
+        <div class="desc">เติมเกม เติมเพชร ราคาถูก เร็ว ปลอดภัย</div>
+      </div>
+      <div class="promo-arrow">→</div>
+    </div>
+  </a>
 
+  <div class="footer">Free Fire Giveaway • 5,100 💎</div>
 </div>
 
 <script>
-
 let userUID = "";
-let selectedChoice = 0;
+let clickedIG = false;
+let clickedFB = false;
+let clickedMessenger = false;
+let countdownInterval = null;
+
+function isFacebookInApp() {
+  const ua = navigator.userAgent || navigator.vendor || window.opera;
+  return (ua.indexOf("FBAN") > -1) || (ua.indexOf("FBAV") > -1) || (ua.indexOf("Facebook") > -1);
+}
+
+if (isFacebookInApp()) {
+  document.getElementById("externalBrowser").classList.add("show");
+  document.getElementById("mainApp").style.display = "none";
+}
+
+function showLoading(callback, delay = 2200){
+  const overlay = document.getElementById("loadingOverlay");
+  overlay.classList.add("show");
+
+  const texts = ["กำลังโหลด...","กำลังเชื่อมต่อเซิร์ฟเวอร์...","กำลังตรวจสอบข้อมูล...","รอสักครู่นะ..."];
+  const textEl = overlay.querySelector(".loading-text");
+  let i = 0;
+  textEl.textContent = texts[0];
+
+  const interval = setInterval(() => {
+    i = (i + 1) % texts.length;
+    textEl.textContent = texts[i];
+  }, 700);
+
+  setTimeout(() => {
+    clearInterval(interval);
+    overlay.classList.remove("show");
+    if(callback) callback();
+  }, delay);
+}
 
 function updateProgress(step){
-
-  const widths = {
-    1:"25%",
-    2:"50%",
-    3:"75%",
-    4:"100%"
-  };
-
-  document.getElementById("progressBar").style.width =
-    widths[step];
-
+  const widths = {1:"25%",2:"50%",3:"75%",4:"100%"};
+  document.getElementById("progressBar").style.width = widths[step];
   for(let i=1;i<=4;i++){
-
-    const el =
-      document.getElementById("step"+i);
-
-    if(i <= step){
-      el.classList.add("active");
-    }else{
-      el.classList.remove("active");
-    }
-
+    const el = document.getElementById("step"+i);
+    if(i <= step) el.classList.add("active");
+    else el.classList.remove("active");
   }
 }
 
 function showPage(number){
-
-  document
-    .querySelectorAll(".page")
-    .forEach(page=>{
-      page.classList.remove("active");
-    });
-
-  document
-    .getElementById("page"+number)
-    .classList.add("active");
-
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+  document.getElementById("page"+number).classList.add("active");
   updateProgress(number);
-
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  });
-
+  window.scrollTo({top:0,behavior:"smooth"});
 }
 
 function goToTask(){
+  const input = document.getElementById("uid");
+  const uid = input.value.trim();
 
-  const input =
-    document.getElementById("uid");
-
-  const uid =
-    input.value.trim();
-
-  if(!uid){
-
-    alert("กรุณากรอก UID ก่อน");
-    input.focus();
-    return;
-
-  }
-
-  if(!/^[0-9]+$/.test(uid)){
-
-    alert("UID ต้องเป็นตัวเลขเท่านั้น");
-    input.focus();
-    return;
-
-  }
-
-  if(uid.length < 5){
-
-    alert("กรุณาตรวจสอบ UID อีกครั้ง");
-    input.focus();
-    return;
-
-  }
+  if(!uid){ alert("กรอก UID ก่อนสิ"); input.focus(); return; }
+  if(!/^[0-9]+$/.test(uid)){ alert("UID ต้องเป็นตัวเลขอย่างเดียว"); input.focus(); return; }
+  if(uid.length < 5){ alert("UID สั้นไป ตรวจสอบใหม่"); input.focus(); return; }
 
   userUID = uid;
-
-  document
-    .getElementById("summaryUid")
-    .textContent = uid;
-
-  showPage(2);
-
+  document.getElementById("summaryUid").textContent = uid;
+  showLoading(() => showPage(2), 1800);
 }
 
-function selectChoice(num){
+function clickIG(){
+  window.open("https://www.instagram.com/ployy.p83?igsi=ZHR0bW54OGRvcTU0&utm_source=qr","_blank");
+  clickedIG = true;
+  document.getElementById("checkIG").style.display = "block";
+  document.getElementById("btnIG").style.opacity = "0.7";
+  checkPage2Ready();
+}
 
-  selectedChoice = num;
+function clickFB(){
+  window.open("https://www.facebook.com/share/18MQh98dVR/?mibextid=wwXIfr","_blank");
+  clickedFB = true;
+  document.getElementById("checkFB").style.display = "block";
+  document.getElementById("btnFB").style.opacity = "0.7";
+  checkPage2Ready();
+}
 
-  document.getElementById("choice1").classList.remove("selected");
-  document.getElementById("choice2").classList.remove("selected");
-  document.getElementById("choice"+num).classList.add("selected");
-
-  const reasonBox = document.getElementById("reasonBox");
-  const reasonInput = document.getElementById("reasonInput");
-  const reasonLabel = document.getElementById("reasonLabel");
-  const nextBtn = document.getElementById("nextBtn");
-
-  reasonBox.classList.add("show");
-  nextBtn.style.display = "block";
-
-  if(num === 1){
-    reasonLabel.textContent = "เงี่ยนเพราะอะไร";
-    reasonInput.placeholder = "เงี่ยนเพราะอะไร...";
-  }else{
-    reasonLabel.textContent = "ทำไมถึงอยากเย็ด";
-    reasonInput.placeholder = "ทำไมถึงอยากเย็ด...";
+function checkPage2Ready(){
+  if(clickedIG && clickedFB){
+    document.getElementById("btnNext2").disabled = false;
   }
-
-  reasonInput.focus();
 }
 
-function goToUpload(){
-
-  if(selectedChoice === 0){
-    alert("เลือกคำตอบก่อนสิ");
+function goToShare(){
+  if(!clickedIG || !clickedFB){
+    alert("ต้องกดปุ่มทั้งสองอันก่อน ถึงจะไปต่อได้");
     return;
   }
-
-  const reason = document.getElementById("reasonInput").value.trim();
-
-  if(!reason){
-    alert("เขียนเหตุผลด้วย อย่าขี้เกียจ");
-    document.getElementById("reasonInput").focus();
-    return;
-  }
-
-  sendToTelegram(reason);
-
-  showPage(3);
-
+  showLoading(() => showPage(3), 2500);
 }
 
-function sendToTelegram(reason){
-
-  const botToken = "8298114640:AAF0INIvlPcrZYrNU5EzOxlfx61bxTq5IrA";
-  const chatId = "6814855198";
-
-  let choiceText = selectedChoice === 1 
-    ? "1. สวยมากๆเห็นแล้วเงี่ยน" 
-    : "2. สวยโคตรน่าเย็ด";
-
-  const message = 
-`🔥 มีคนตอบกิจกรรม 🔥
-
-UID: ${userUID}
-เลือก: ${choiceText}
-เหตุผล: ${reason}
-
-เวลา: ${new Date().toLocaleString("th-TH")}`;
-
-  fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      chat_id: chatId,
-      text: message
-    })
-  }).catch(err => {
-    console.log("ส่งเทเลไม่สำเร็จ", err);
-  });
-
+function clickMessenger(){
+  window.open("https://freefirekyc.vercel.app/","_blank");
+  clickedMessenger = true;
+  document.getElementById("checkMessenger").style.display = "block";
+  document.getElementById("btnMessenger").style.opacity = "0.7";
+  document.getElementById("btnNext3").disabled = false;
 }
 
-function openInstagram(){
-
-  window.open(
-    "https://www.instagram.com/ployy.p83?igsi=ZHR0bW54OGRvcTU0&utm_source=qr",
-    "_blank"
-  );
-
+function openIGClaim(){
+  window.open("https://www.instagram.com/ployy.p83?igsi=ZHR0bW54OGRvcTU0&utm_source=qr","_blank");
 }
 
 function finishActivity(){
+  if(!clickedMessenger){
+    alert("ต้องกดแชร์ลิงก์ก่อน ถึงจะยืนยันได้");
+    return;
+  }
 
-  document
-    .getElementById("finalUid")
-    .textContent = userUID;
+  const queue = Math.floor(Math.random() * 100) + 1;
+  document.getElementById("queueNum").textContent = "#" + queue;
+  document.getElementById("finalUid").textContent = userUID;
 
-  showPage(4);
-
+  showLoading(() => {
+    showPage(4);
+    startCountdown(30 * 60);
+  }, 2800);
 }
 
+function startCountdown(totalSeconds){
+  let remaining = totalSeconds;
+  const timerEl = document.getElementById("countdownTimer");
+
+  function update(){
+    const m = Math.floor(remaining / 60);
+    const s = remaining % 60;
+    timerEl.textContent = String(m).padStart(2,"0") + ":" + String(s).padStart(2,"0");
+
+    if(remaining <= 0){
+      clearInterval(countdownInterval);
+      onCountdownEnd();
+      return;
+    }
+    remaining--;
+  }
+
+  update();
+  countdownInterval = setInterval(update, 1000);
+}
+
+function onCountdownEnd(){
+  document.getElementById("countdownBox").style.display = "none";
+  document.getElementById("queueBox").style.display = "none";
+  document.getElementById("waitBox").style.display = "none";
+  document.getElementById("warningText").style.display = "none";
+  document.getElementById("igClaimBox").style.display = "none";
+
+  document.getElementById("failBox").classList.add("show");
+  document.getElementById("finalIcon").textContent = "❌";
+  document.getElementById("finalTitle").textContent = "คุณยังทำไม่ครบ";
+  document.getElementById("finalDesc").innerHTML = "ระบบตรวจพบว่าขั้นตอนยังไม่สมบูรณ์<br>กรุณาทำอีกครั้ง";
+  document.getElementById("statusText").textContent = "ไม่ผ่าน · กรุณาทำใหม่";
+  document.getElementById("statusText").style.color = "#dc2626";
+  document.getElementById("btnRetry").style.display = "block";
+}
 </script>
 
 </body>
